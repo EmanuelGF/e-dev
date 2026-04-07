@@ -1,0 +1,47 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#201A23"/>
+      <stop offset="1" stop-color="#102D2D"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 230) rotate(90) scale(210 320)">
+      <stop stop-color="#48B7FF" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#5ADA5A" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0B1018" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.36 0 0 0 0 0.86 0 0 0 0 0.36 0 0 0 0.95 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.28 0 0 0 0 0.72 0 0 0 0 1 0 0 0 0.9 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#48B7FF" stroke-opacity="0.08"/>
+    </pattern>
+    <pattern id="scan" width="800" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H800" stroke="#FFFFFF" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="480" rx="32" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="32" fill="url(#core)"/>
+  <rect width="800" height="480" rx="32" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="32" fill="url(#scan)"/>
+
+  <rect x="86" y="62" width="628" height="356" rx="24" fill="#080C12" fill-opacity="0.88" stroke="#48B7FF" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="116" y="116" fill="#BEFF9E" font-size="22" font-family="'Share Tech Mono', Consolas, monospace" letter-spacing="4">GAME_ENGINE//C_SHARP</text>
+  <text x="116" y="148" fill="#F8FAFC" font-size="15" font-family="'Share Tech Mono', Consolas, monospace">tutorial series / Stride3D notes</text>
+
+  <g transform="translate(258 175)">
+    <path d="M120 0L240 70V210L120 280L0 210V70L120 0Z" fill="#101822" stroke="#48B7FF" stroke-width="4" filter="url(#blueGlow)"/>
+    <path d="M120 34L208 86V190L120 242L32 190V86L120 34Z" fill="#0B1018" stroke="#5ADA5A" stroke-width="4" filter="url(#greenGlow)"/>
+    <path d="M70 102C82 76 110 62 142 68C168 72 186 88 196 108L166 126C160 114 150 106 136 102C114 96 96 106 90 124C84 144 100 158 128 166C174 180 202 202 190 238C180 270 146 286 106 278C72 272 48 254 36 226L68 210C76 230 92 242 114 246C136 250 154 242 160 224C166 204 150 192 120 184C78 172 48 148 70 102Z" fill="#BEFF9E" filter="url(#greenGlow)"/>
+  </g>
+
+  <text x="236" y="390" fill="#F8FAFC" font-size="34" font-family="'Share Tech Mono', Consolas, monospace" letter-spacing="6">Stride3D</text>
+  <text x="318" y="424" fill="#48B7FF" font-size="18" font-family="'Share Tech Mono', Consolas, monospace">C# GAME ENGINE</text>
+</svg>

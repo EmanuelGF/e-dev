@@ -1,0 +1,44 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D2E2E"/>
+      <stop offset="1" stop-color="#201A23"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.37 0 0 0 0 1 0 0 0 0 0.47 0 0 0 0.9 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.28 0 0 0 0 0.72 0 0 0 0 1 0 0 0 0.8 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" stroke="#5ADA5A" stroke-opacity="0.07"/>
+    </pattern>
+    <pattern id="scan" width="800" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H800" stroke="#FFFFFF" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="480" rx="32" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="32" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="32" fill="url(#scan)"/>
+
+  <rect x="86" y="62" width="628" height="356" rx="24" fill="#080C12" fill-opacity="0.9" stroke="#BEFF9E" stroke-opacity="0.26" stroke-width="2"/>
+  <text x="118" y="116" fill="#BEFF9E" font-size="23" font-family="'Share Tech Mono', Consolas, monospace" letter-spacing="4">GITHUB//SOURCE_NODE</text>
+  <text x="118" y="148" fill="#F8FAFC" font-size="15" font-family="'Share Tech Mono', Consolas, monospace">repos / experiments / commits</text>
+
+  <rect x="118" y="184" width="564" height="170" rx="18" fill="#0F172A" stroke="#48B7FF" stroke-opacity="0.28"/>
+  <text x="146" y="232" fill="#5ADA5A" font-size="24" font-family="'Share Tech Mono', Consolas, monospace" filter="url(#glow)">[emanuel-dev@github]$ git status</text>
+  <text x="146" y="270" fill="#F8FAFC" font-size="22" font-family="'Share Tech Mono', Consolas, monospace">on branch main</text>
+  <text x="146" y="308" fill="#48B7FF" font-size="22" font-family="'Share Tech Mono', Consolas, monospace" filter="url(#blueGlow)">changes: portfolio / games / blog</text>
+
+  <path d="M526 236C548 198 604 198 626 236C648 274 620 322 576 322C532 322 504 274 526 236Z" stroke="#BEFF9E" stroke-width="8" filter="url(#glow)"/>
+  <circle cx="576" cy="256" r="18" fill="#BEFF9E" filter="url(#glow)"/>
+  <path d="M576 276V318M548 294H604" stroke="#BEFF9E" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+
+  <path d="M118 382H682" stroke="#5ADA5A" stroke-opacity="0.24"/>
+  <text x="118" y="410" fill="#F8FAFC" font-size="22" font-family="'Share Tech Mono', Consolas, monospace">github profile / public work</text>
+</svg>

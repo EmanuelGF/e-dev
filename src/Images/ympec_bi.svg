@@ -1,0 +1,59 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#201A23"/>
+      <stop offset="1" stop-color="#102D2D"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="86" y1="58" x2="714" y2="422" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101822" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#070B11" stop-opacity="0.98"/>
+    </linearGradient>
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.37 0 0 0 0 1 0 0 0 0 0.47 0 0 0 0.9 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.28 0 0 0 0 0.72 0 0 0 0 1 0 0 0 0.85 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#48B7FF" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <pattern id="scan" width="800" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H800" stroke="#FFFFFF" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="480" rx="32" fill="url(#bg)"/>
+  <rect width="800" height="480" rx="32" fill="url(#grid)"/>
+  <rect width="800" height="480" rx="32" fill="url(#scan)"/>
+
+  <rect x="68" y="54" width="664" height="372" rx="22" fill="url(#panel)" stroke="#5ADA5A" stroke-opacity="0.34" stroke-width="2"/>
+  <path d="M96 106H704" stroke="#48B7FF" stroke-opacity="0.32"/>
+  <circle cx="112" cy="82" r="6" fill="#5ADA5A" filter="url(#greenGlow)"/>
+  <circle cx="136" cy="82" r="6" fill="#48B7FF" filter="url(#blueGlow)"/>
+  <circle cx="160" cy="82" r="6" fill="#FF4FD8"/>
+
+  <text x="104" y="148" fill="#BEFF9E" font-size="24" font-family="'Share Tech Mono', Consolas, monospace" letter-spacing="3">BI//OPS_PANEL</text>
+  <text x="104" y="180" fill="#F8FAFC" font-size="15" font-family="'Share Tech Mono', Consolas, monospace">[ympec-bi] live metrics stream</text>
+
+  <rect x="104" y="214" width="178" height="122" rx="14" fill="#111827" stroke="#5ADA5A" stroke-opacity="0.45"/>
+  <path d="M128 302L154 278L184 288L212 244L250 264" stroke="#5ADA5A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#greenGlow)"/>
+  <path d="M128 316H258" stroke="#48B7FF" stroke-opacity="0.35"/>
+  <path d="M128 238V316" stroke="#48B7FF" stroke-opacity="0.35"/>
+
+  <rect x="318" y="214" width="178" height="122" rx="14" fill="#111827" stroke="#48B7FF" stroke-opacity="0.42"/>
+  <rect x="348" y="286" width="24" height="30" fill="#48B7FF" filter="url(#blueGlow)"/>
+  <rect x="392" y="252" width="24" height="64" fill="#BEFF9E" filter="url(#greenGlow)"/>
+  <rect x="436" y="234" width="24" height="82" fill="#FF4FD8"/>
+
+  <rect x="532" y="214" width="146" height="122" rx="14" fill="#111827" stroke="#BEFF9E" stroke-opacity="0.32"/>
+  <circle cx="605" cy="275" r="36" stroke="#48B7FF" stroke-opacity="0.32" stroke-width="16"/>
+  <path d="M605 239A36 36 0 0 1 641 275" stroke="#5ADA5A" stroke-width="16" stroke-linecap="round" filter="url(#greenGlow)"/>
+  <text x="581" y="284" fill="#F8FAFC" font-size="18" font-family="'Share Tech Mono', Consolas, monospace">84%</text>
+
+  <path d="M104 374H696" stroke="#5ADA5A" stroke-opacity="0.24"/>
+  <text x="104" y="404" fill="#F8FAFC" font-size="22" font-family="'Share Tech Mono', Consolas, monospace">business intelligence platform</text>
+</svg>

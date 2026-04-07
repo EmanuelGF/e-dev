@@ -1,0 +1,103 @@
+{
+  "lang": "en",
+  "navTop": {
+    "message": "WELCOME TO MY PERSONAL PAGE!",
+    "Menu": {
+      "item1": "<home>",
+      "item2": "<blog>",
+      "item3": "<games>"
+    }
+  },
+  "header": {
+    "home": {
+      "title": "Hi, I am Emanuel!",
+      "intro": "I am a software developer based in Portugal.",
+      "subTitle": "Portfolio and Blog"
+    },
+    "folio": {
+      "title": "Portfolio",
+      "text1": "Click ",
+      "text2": " to check some of my recent work.",
+      "text3": "My development interests are varied, but I have a special passion for web technologies and game development.",
+      "text4": "Tech stack:",
+      "text5": "C#, .NET, JavaScript, Node.js among others.",
+      "linkText1": "<here>"
+    },
+    "blog": {
+      "title": "I also keep a ",
+      "text1": "I enjoy learning and creating content.",
+      "text2": "From web development to games, and other technology-related topics, I share what I learn and what interests me.",
+      "text3": "You can also find me here:",
+      "linkText1": "<LinkedIn>",
+      "linkText4": "<blog>"
+    },
+    "contacts": {
+      "title": "Contact",
+      "text1": "<LinkedIn>",
+      "text2": "Leave a message.",
+      "text3": "Let me know what is on your mind."
+    },
+    "about": {
+      "title": "About me",
+      "text1": "Scroll down and have a look!"
+    },
+    "credits": {
+      "title": "Credits",
+      "text1": "This site was built using React!",
+      "text2": "",
+      "title2": "Special thanks to:",
+      "text4": "My wife 💖",
+      "text5": "",
+      "text6": ""
+    }
+  },
+  "cubeMenu": {
+    "linkText1": "HOME",
+    "linkText2": "FOLIO",
+    "linkText3": "BLOG",
+    "linkText4": "CONTACT",
+    "linkText5": "ABOUT",
+    "linkText6": "CREDITS"
+  },
+  "about": {
+    "title": "> ABOUT ME",
+    "aboutSection": {
+      "fakePrompt1": "[emanuel-dev@localhost~]$ whoami",
+      "text1": "I am a self-taught programmer who enjoys learning, building and working on software solutions.",
+      "expTitle": "Professional experience",
+      "exp0": "{Full Stack Developer at Oceano Platónico}",
+      "exp1": "{Full Stack Developer at YMPEC}",
+      "exp2": "{Internship at Innuos}",
+      "exp3": "{Freelancing}",
+      "eduTitle": "Education",
+      "edu1": "{Computer technician - IEFP Portugal}",
+      "edu2": "<Codecademy>",
+      "edu3": "{Udemy}"
+    }
+  },
+  "recentWork": {
+    "title": "Check out some of my recent work"
+  },
+  "footer": {
+    "linkText1": "<privacy policy>"
+  },
+  "games": {
+    "title": "Games",
+    "intro": "Play small browser games directly inside the site.",
+    "author": "Author",
+    "published": "Published",
+    "launch": "Launch Game",
+    "openStandalone": "Open standalone",
+    "backToGames": "< back to games >",
+    "back": "< go back >",
+    "notFound": "Game not found."
+  },
+  "article": {
+    "author": "Author",
+    "loading": "Loading...",
+    "loadError": "Unable to load article content.",
+    "notFound": "Article not found.",
+    "notFoundText": "The requested post is not available in the local content collection.",
+    "back": "< go back >"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Connect Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gameTitle">Power Connect Puzzle - by emanuel-dev</div>
+  
+  <div id="startMenu">
+    <h1>Power Connect Puzzle</h1>
+    <button id="startButton">Start Game</button>
+  </div>
+  
+  <div id="hud">
+    Score: <span id="score">0</span> | Ability Points: <span id="ability">0</span>
+  </div>
+  
+  <div id="container">
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+    <div id="abilitySidebar">
+      <canvas class="abilityOption" id="abilityPower" width="40" height="40"></canvas>
+      <canvas class="abilityOption" id="abilityLine" width="40" height="40"></canvas>
+      <canvas class="abilityOption" id="abilityL" width="40" height="40"></canvas>
+      <div id="instructions">
+        <p>Arrow Left/Right: Move</p>
+        <p>S: Drop faster</p>
+        <p>Space: Rotate falling piece</p>
+        <p>Click slab: Apply ability (if you have points)</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="copyrightNotice">© 2026 Emanuel Faisca. All rights reserved.</div>
+  
+  <script src="game.js"></script>
+</body>
+</html>

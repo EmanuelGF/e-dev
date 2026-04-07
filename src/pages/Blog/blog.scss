@@ -1,0 +1,101 @@
+.blog {
+    min-height: 100vh;
+    background-image: var(--gradient-page);
+    color: var(--color-text-primary);
+    .blog-article-container {
+        max-width: 860px;
+        margin: 140px auto 0 auto;
+        padding: 0 24px 64px 24px;
+
+        h2 {
+            margin-bottom: 32px;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            text-align: center;
+            color: var(--color-acid);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 18px;
+        }
+
+        a {
+            display: block;
+            padding: 24px 28px;
+            border: 1px solid var(--border-acid-soft);
+            border-radius: var(--radius-card-inner);
+            background: var(--color-bg-panel);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+            &:hover {
+                text-decoration: none;
+                color: var(--color-text-primary);
+                border-color: var(--border-acid-strong);
+                background: rgba(15, 24, 36, 0.9);
+                transform: translateY(-2px);
+                box-shadow: var(--glow-mixed-soft);
+            }
+        }
+
+        h4 {
+            margin-bottom: 10px;
+            font-family: var(--font-body);
+            font-size: 1.8rem;
+            line-height: 1.2;
+            color: var(--color-text-strong);
+            transition: color 0.18s ease, text-shadow 0.18s ease;
+        }
+
+        small {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #d6dbd4;
+            transition: color 0.18s ease;
+        }
+
+        a:hover h4 {
+            color: var(--color-acid);
+            text-shadow: var(--glow-acid-soft);
+        }
+
+        a:hover small {
+            color: #f5f7ef;
+        }
+
+        hr {
+            margin-top: 18px;
+            margin-bottom: 0;
+            border-top: 1px solid rgba(190, 239, 158, 0.14);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .blog .blog-article-container {
+        margin-top: 120px;
+        padding: 0 16px 48px 16px;
+
+        a {
+            padding: 20px;
+        }
+
+        h4 {
+            font-size: 1.45rem;
+        }
+
+        small {
+            font-size: 0.98rem;
+        }
+    }
+}
+

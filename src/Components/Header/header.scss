@@ -1,0 +1,336 @@
+.header {
+    position: relative;
+    overflow: hidden;
+    min-height: 680px;
+    background-image: var(--gradient-page);
+
+    .row {
+        position: relative;
+        min-height: 680px;
+        margin: 0;
+    }
+}
+
+.header-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--color-text-primary);
+    z-index: 2;
+}
+
+.header-menu-controls {
+    margin-top: 100px;
+    text-align: center;
+}
+
+$face-color: #201a23fd;
+$translate-z: 157px;
+
+.scene {
+    display: inline-block;
+    margin: 90px 0 0 0;
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+    perspective-origin: center;
+}
+
+.cube {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+    transition: ease-in-out transform 0.8s;
+}
+
+.cube.show-front  { transform: translateZ(10px) rotateY(0deg); }
+.cube.show-right  { transform: translateZ(10px) rotateY(-90deg); }
+.cube.show-back   { transform: translateZ(10px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(10px) rotateY(90deg); }
+.cube.show-top    { transform: translateZ(10px) rotateX(-90deg); }
+.cube.show-bottom { transform: translateZ(10px) rotateX(90deg); }
+
+.cube__face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(103, 213, 240, 0.5);
+    box-shadow:
+        0 0 6px rgba(103, 240, 109, 0.45),
+        inset 0 0 6px rgba(103, 240, 109, 0.12);
+    text-align: center;
+    font-family: var(--font-display);
+    color: var(--color-acid-strong);
+    padding: 8px;
+    overflow: hidden;
+
+    h3 {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+        margin: 5px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 8px;
+        color: var(--color-text-strong);
+        text-align: center;
+        margin: 8px;
+
+        a {
+            &:hover {
+                text-decoration: none;
+                color: var(--color-acid-strong);
+            }
+        }
+    }
+}
+
+.header-about-gif {
+    width: 180px;
+}
+
+.cube__face--front {
+    background: $face-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px;
+}
+
+.cube-home-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 260px;
+    padding: 8px 6px;
+    background: linear-gradient(180deg, rgba(32, 26, 35, 0.42), rgba(32, 26, 35, 0.12));
+    text-shadow: 0 0 10px rgba(90, 218, 90, 0.28);
+}
+
+.cube-home-avatar {
+    position: relative;
+    z-index: 2;
+    width: 94px;
+    height: 94px;
+    border: 2px solid rgba(190, 255, 158, 0.8);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 18%;
+    opacity: 0.78;
+    background: rgba(16, 24, 39, 0.72);
+    filter:
+        saturate(0.9)
+        contrast(1.08)
+        drop-shadow(0 0 10px rgba(72, 183, 255, 0.32))
+        drop-shadow(0 0 14px rgba(90, 218, 90, 0.18));
+    pointer-events: none;
+}
+
+.cube__face--right,
+.cube__face--back,
+.cube__face--left,
+.cube__face--top,
+.cube__face--bottom {
+    background: $face-color;
+}
+
+.cube__face--front  { transform: rotateY(0deg) translateZ($translate-z); }
+.cube__face--right  { transform: rotateY(90deg) translateZ($translate-z); }
+.cube__face--back   { transform: rotateY(180deg) translateZ($translate-z); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ($translate-z); }
+.cube__face--top    { transform: rotateX(90deg) translateZ($translate-z); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ($translate-z); }
+
+.header-menu-buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: calc(100% - 32px);
+    margin: 0 auto;
+    padding: 10px 16px;
+    list-style: none;
+    border: 1px solid rgba(190, 239, 158, 0.28);
+    border-radius: var(--radius-pill);
+    background: rgba(16, 24, 39, 0.72);
+    backdrop-filter: blur(4px);
+
+    li {
+        display: inline-block;
+        padding: 0;
+    }
+
+    button {
+        min-width: 92px;
+        padding: 10px 14px;
+        border: 1px solid rgba(91, 154, 216, 0.28);
+        border-radius: var(--radius-pill);
+        background: var(--color-bg-chip);
+        color: #dbeafe;
+        font: 700 0.8rem var(--font-display);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        appearance: none;
+        outline: none;
+        pointer-events: auto;
+        transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, text-shadow 0.2s ease;
+
+        &:hover {
+            background: rgba(91, 154, 216, 0.18);
+            border-color: rgba(190, 239, 158, 0.5);
+            color: var(--color-acid);
+            transform: translateY(-1px);
+            text-shadow: 0 0 8px rgba(190, 239, 158, 0.35);
+            box-shadow: 0 0 8px rgba(190, 239, 158, 0.16), inset 0 0 8px rgba(72, 183, 255, 0.12);
+            cursor: pointer;
+        }
+
+        &.is-active {
+            background: rgba(91, 154, 216, 0.26);
+            border-color: rgba(190, 239, 158, 0.72);
+            color: var(--color-acid);
+        }
+    }
+}
+
+.particles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 680px;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    display: block;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--color-acid), #5b9ad8);
+    box-shadow: 0 0 18px rgba(91, 154, 216, 0.35);
+    animation-name: float-particle;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+
+@keyframes float-particle {
+    0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+    25% { transform: translate3d(18px, -26px, 0) rotate(90deg); }
+    50% { transform: translate3d(-10px, -52px, 0) rotate(180deg); }
+    75% { transform: translate3d(12px, -18px, 0) rotate(270deg); }
+    100% { transform: translate3d(0, 0, 0) rotate(360deg); }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        min-height: 610px;
+
+        .row {
+            min-height: 610px;
+        }
+    }
+
+    .header-menu {
+        top: 100px;
+    }
+
+    $translate-z: 117px;
+
+    .scene {
+        width: 230px;
+        height: 230px;
+    }
+
+    .cube {
+        width: 230px;
+        height: 230px;
+    }
+
+    .cube.show-front  { transform: translateZ(50px) rotateY(0deg); }
+    .cube.show-right  { transform: translateZ(50px) rotateY(-90deg); }
+    .cube.show-back   { transform: translateZ(50px) rotateY(-180deg); }
+    .cube.show-left   { transform: translateZ(50px) rotateY(90deg); }
+    .cube.show-top    { transform: translateZ(50px) rotateX(-90deg); }
+    .cube.show-bottom { transform: translateZ(50px) rotateX(90deg); }
+
+    .cube__face {
+        width: 230px;
+        height: 230px;
+
+        h3 { font-size: 0.7rem; }
+        h5 { font-size: 0.5rem; }
+        p { font-size: 6px; }
+        a { font-size: 0.5rem; }
+    }
+
+    .header-about-gif {
+        width: 120px;
+    }
+
+    .cube__face--front {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .cube-home-copy {
+        max-width: 210px;
+    }
+
+    .cube-home-avatar {
+        width: 72px;
+        height: 72px;
+    }
+
+    .cube__face--front  { transform: rotateY(0deg) translateZ($translate-z); }
+    .cube__face--right  { transform: rotateY(90deg) translateZ($translate-z); }
+    .cube__face--back   { transform: rotateY(180deg) translateZ($translate-z); }
+    .cube__face--left   { transform: rotateY(-90deg) translateZ($translate-z); }
+    .cube__face--top    { transform: rotateX(90deg) translateZ($translate-z); }
+    .cube__face--bottom { transform: rotateX(-90deg) translateZ($translate-z); }
+
+    .header-menu-buttons button {
+        min-width: 72px;
+        padding: 8px 10px;
+        font-size: 0.62rem;
+    }
+
+    .particles {
+        height: 610px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        min-height: 640px;
+
+        .row {
+            min-height: 640px;
+        }
+    }
+
+    .header-menu-buttons button {
+        min-width: 64px;
+        font-size: 0.54rem;
+    }
+
+    .particles {
+        height: 640px;
+    }
+
+    .header-menu-controls {
+        margin-top: 24px;
+    }
+}

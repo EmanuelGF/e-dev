@@ -1,0 +1,113 @@
+.games {
+    min-height: 100vh;
+    padding: 150px 24px 64px 24px;
+    background-image: var(--gradient-page);
+    color: var(--color-text-primary);
+
+    .games-container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 28px 32px;
+        border: 1px solid var(--border-acid-soft);
+        border-radius: var(--radius-card);
+        background: var(--color-bg-panel);
+        box-shadow: var(--glow-electric-soft);
+        text-align: center;
+    }
+
+    .games-intro {
+        margin-bottom: 28px;
+    }
+
+    .games-list {
+        display: grid;
+        gap: 22px;
+    }
+
+    .game-card {
+        padding: 24px 26px;
+        border: 1px solid var(--border-electric-soft);
+        border-radius: var(--radius-card-inner);
+        background: var(--color-bg-panel-strong);
+        text-align: left;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        color: var(--color-acid);
+    }
+
+    h3 {
+        margin-bottom: 12px;
+        font-family: var(--font-display);
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--color-electric);
+    }
+
+    p {
+        font-family: var(--font-body);
+        font-size: 1.08rem;
+        line-height: 1.8;
+        color: #eef4f7;
+    }
+
+    .game-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        margin: 18px 0 20px 0;
+        font-family: var(--font-body);
+        font-size: 0.96rem;
+        color: var(--color-text-muted);
+    }
+
+    .game-launch-link {
+        display: inline-block;
+        padding: 12px 18px;
+        border: 1px solid var(--border-acid-mid);
+        border-radius: var(--radius-pill);
+        background: var(--color-bg-chip);
+        color: var(--color-acid);
+        font-family: var(--font-display);
+        font-size: 0.72rem;
+        text-decoration: none;
+        transition: transform 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+
+        &:hover {
+            color: #f4fff1;
+            text-decoration: none;
+            border-color: var(--border-acid-strong);
+            box-shadow: var(--glow-acid-soft);
+            transform: translateY(-1px);
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .games {
+        padding: 120px 16px 48px 16px;
+
+        .games-container {
+            padding: 22px 18px;
+        }
+
+        h2 {
+            font-size: 0.92rem;
+        }
+
+        h3 {
+            font-size: 0.76rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .game-meta {
+            font-size: 0.9rem;
+        }
+    }
+}

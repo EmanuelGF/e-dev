@@ -1,0 +1,23 @@
+.error {
+  height: 100vh;
+  background-color: rgba(182, 55, 55, 0.904);
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error h1 {
+  margin: 14px 0 40px;
+  font-size: calc(17vw + 40px);
+  opacity: 0.85;
+}
+
+p {
+  opacity: 0.8;
+  font-size: 20px;
+  margin: 8px 0 38px 0;
+  font-weight: bold;
+}

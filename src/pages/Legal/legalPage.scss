@@ -1,0 +1,64 @@
+.privacy-policy {
+    min-height: 100vh;
+    background-image: var(--gradient-page);
+    padding: 150px 24px 64px 24px;
+    color: var(--color-text-primary);
+
+    .privacy-policy-container {
+        max-width: 860px;
+        margin: 0 auto;
+        display: grid;
+        gap: 28px;
+    }
+
+    .privacy-policy-card {
+        padding: 28px 32px;
+        border: 1px solid var(--border-acid-soft);
+        border-radius: var(--radius-card);
+        background: var(--color-bg-panel);
+        box-shadow: var(--glow-electric-soft);
+
+        h2 {
+            margin-bottom: 18px;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-acid);
+            text-align: center;
+        }
+
+        p {
+            font-family: var(--font-body);
+            font-size: 1.08rem;
+            line-height: 1.8;
+            color: #eef4f7;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-policy-note {
+            margin-bottom: 0;
+            color: #cfe7d4;
+            border-top: 1px solid rgba(190, 239, 158, 0.14);
+            padding-top: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) { 
+    .privacy-policy {
+        padding: 120px 16px 48px 16px;
+
+        .privacy-policy-card {
+            padding: 22px 18px;
+
+            h2 {
+                font-size: 0.82rem;
+            }
+
+            p {
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+        }
+    }
+}

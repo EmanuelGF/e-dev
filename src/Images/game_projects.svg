@@ -1,0 +1,54 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="pulse" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 228) rotate(90) scale(278 440)">
+      <stop stop-color="#48B7FF" stop-opacity="0.24"/>
+      <stop offset="0.46" stop-color="#1D2E2E" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#201A23"/>
+    </radialGradient>
+    <filter id="pinkGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1 0 0 0 0 0.31 0 0 0 0 0.85 0 0 0 0.95 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.37 0 0 0 0 1 0 0 0 0 0.47 0 0 0 0.95 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <pattern id="scan" width="800" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H800" stroke="#FFFFFF" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="480" rx="32" fill="url(#pulse)"/>
+  <rect width="800" height="480" rx="32" fill="url(#scan)"/>
+  <rect x="78" y="58" width="644" height="364" rx="24" fill="#090E15" fill-opacity="0.88" stroke="#48B7FF" stroke-opacity="0.28" stroke-width="2"/>
+
+  <text x="106" y="104" fill="#BEFF9E" font-size="22" font-family="'Share Tech Mono', Consolas, monospace" letter-spacing="4">CONTENT//GAMES_CHANNEL</text>
+  <text x="106" y="136" fill="#F8FAFC" font-size="15" font-family="'Share Tech Mono', Consolas, monospace">video log / experiments / game dev notes</text>
+
+  <rect x="270" y="168" width="260" height="152" rx="22" fill="#111827" stroke="#FF4FD8" stroke-opacity="0.58"/>
+  <path d="M370 204L370 284L444 244L370 204Z" fill="#FF4FD8" filter="url(#pinkGlow)"/>
+  <rect x="304" y="346" width="192" height="18" rx="9" fill="#48B7FF" fill-opacity="0.24"/>
+  <rect x="304" y="346" width="118" height="18" rx="9" fill="#5ADA5A" filter="url(#greenGlow)"/>
+
+  <path d="M192 226H254" stroke="#48B7FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 10"/>
+  <path d="M546 226H608" stroke="#48B7FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 10"/>
+  <path d="M224 286H272" stroke="#5ADA5A" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 10"/>
+  <path d="M528 286H576" stroke="#5ADA5A" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 10"/>
+
+  <rect x="150" y="184" width="74" height="74" rx="16" fill="#0F172A" stroke="#5ADA5A" stroke-opacity="0.38"/>
+  <path d="M174 220H200M187 207V233" stroke="#5ADA5A" stroke-width="5" stroke-linecap="round" filter="url(#greenGlow)"/>
+
+  <rect x="576" y="184" width="74" height="74" rx="16" fill="#0F172A" stroke="#48B7FF" stroke-opacity="0.38"/>
+  <circle cx="613" cy="221" r="20" stroke="#48B7FF" stroke-width="5"/>
+  <circle cx="613" cy="221" r="5" fill="#48B7FF"/>
+
+  <rect x="172" y="304" width="74" height="74" rx="16" fill="#0F172A" stroke="#FF4FD8" stroke-opacity="0.38"/>
+  <path d="M192 341L204 353L226 326" stroke="#FF4FD8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#pinkGlow)"/>
+
+  <rect x="554" y="304" width="74" height="74" rx="16" fill="#0F172A" stroke="#BEFF9E" stroke-opacity="0.38"/>
+  <path d="M576 338H606M576 356H616M576 320H596" stroke="#BEFF9E" stroke-width="5" stroke-linecap="round" filter="url(#greenGlow)"/>
+
+  <text x="106" y="404" fill="#F8FAFC" font-size="22" font-family="'Share Tech Mono', Consolas, monospace">youtube channel / creator lab</text>
+</svg>

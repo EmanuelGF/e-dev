@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --font-display: 'Press Start 2P', cursive;
+  --font-body: 'Share Tech Mono', monospace;
+
+  --color-bg-deep: #11161c;
+  --color-bg-panel: rgba(12, 18, 26, 0.72);
+  --color-bg-panel-strong: rgba(18, 24, 34, 0.82);
+  --color-bg-panel-dark: rgba(8, 12, 18, 0.85);
+  --color-bg-overlay: rgba(33, 26, 48, 0.82);
+  --color-bg-hero-top: #201a23;
+  --color-bg-hero-bottom: rgb(29, 46, 46);
+  --color-bg-chip: rgba(32, 26, 35, 0.92);
+
+  --color-text-strong: #f8fafc;
+  --color-text-primary: oldlace;
+  --color-text-muted: #d5e3ec;
+  --color-text-soft: #cbd5e1;
+
+  --color-acid: #beef9e;
+  --color-acid-strong: #5ada5a;
+  --color-electric: #8dd8ff;
+  --color-electric-strong: #48b7ff;
+
+  --border-acid-soft: rgba(190, 239, 158, 0.22);
+  --border-acid-mid: rgba(190, 239, 158, 0.34);
+  --border-acid-strong: rgba(190, 239, 158, 0.7);
+  --border-electric-soft: rgba(72, 183, 255, 0.16);
+  --border-electric-mid: rgba(72, 183, 255, 0.2);
+
+  --glow-acid-soft: 0 0 8px rgba(190, 239, 158, 0.22);
+  --glow-acid-strong: 0 0 10px rgba(190, 239, 158, 0.28);
+  --glow-electric-soft: 0 0 12px rgba(72, 183, 255, 0.08);
+  --glow-mixed-soft: 0 0 10px rgba(190, 239, 158, 0.15), 0 0 22px rgba(72, 183, 255, 0.08);
+  --glow-mixed-link: 0 0 8px rgba(190, 239, 158, 0.3), 0 0 16px rgba(72, 183, 255, 0.14);
+  --glow-logo: 0 0 8px rgba(90, 218, 90, 0.45), 0 0 18px rgba(72, 183, 255, 0.18);
+
+  --gradient-page: linear-gradient(var(--color-bg-hero-top), var(--color-bg-hero-bottom));
+
+  --radius-card: 20px;
+  --radius-card-inner: 18px;
+  --radius-frame: 22px;
+  --radius-pill: 999px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+    scroll-behavior: smooth;   
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  background: var(--color-bg-deep);
+  overflow-x: hidden;
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+body::before {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.045) 0,
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+
+body::after {
+  background:
+    radial-gradient(circle at center, rgba(92, 255, 140, 0.06) 0%, rgba(92, 255, 140, 0.025) 28%, rgba(10, 14, 20, 0) 58%),
+    radial-gradient(circle at center, rgba(72, 183, 255, 0.05) 0%, rgba(10, 14, 20, 0) 52%),
+    radial-gradient(circle at center, transparent 50%, rgba(3, 6, 10, 0.34) 100%);
+}
+
+#root {
+  position: relative;
+  isolation: isolate;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
+
+/* loading animation */
+.loading {
+	font-family: var(--font-display);
+	font-size: 8px;
+	color: var(--color-text-primary);
+	text-align: center;
+	margin: 200px auto 600px auto;
+	height: 200px;
+	width: 200px;
+	background-color: rgba(137, 43, 226, 0.822);
+}
+
+.square {
+	background-color: var(--color-acid-strong);
+	height: 45%;
+	width: 50%;
+	animation: move-inside 1s ease-in-out forwards infinite alternate;
+}
+
+@keyframes move-inside {
+	0% {
+		transform: translateX(0);
+	}
+	33% {
+		transform: translateY(100%)
+	}
+	66% {
+		background-color: rgb(45, 45, 218);
+		transform: translateX(100%) translateY(100%);
+	}
+	100% {
+		background-color: rgb(240, 22, 229);
+		transform: translateX(100%) ;
+	}
+}

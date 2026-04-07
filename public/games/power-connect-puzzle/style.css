@@ -1,0 +1,204 @@
+body { 
+  margin: 0; 
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(72, 183, 255, 0.18) 0%, rgba(72, 183, 255, 0.06) 18%, transparent 42%),
+    linear-gradient(180deg, #15121c 0%, #132224 58%, #0c1618 100%);
+  font-family: "Share Tech Mono", monospace; 
+  color: #e0e0e0;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 0,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  opacity: 0.16;
+  mix-blend-mode: screen;
+}
+
+body::after {
+  background:
+    radial-gradient(circle at center, transparent 52%, rgba(5, 9, 13, 0.38) 100%);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+#gameTitle {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  padding: 8px 12px;
+  border: 1px solid rgba(190, 239, 158, 0.22);
+  border-radius: 999px;
+  background: rgba(13, 18, 26, 0.58);
+  box-shadow: inset 0 0 8px rgba(72, 183, 255, 0.08);
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #beef9e;
+  text-shadow: 0 0 8px rgba(190, 239, 158, 0.28);
+  animation: slideInLeft 1s ease-out;
+}
+
+#startMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 8, 12, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#startMenu h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #beef9e;
+  text-shadow: 0 0 12px rgba(190, 239, 158, 0.18);
+}
+
+#startButton {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  border: 1px solid rgba(190, 239, 158, 0.48);
+  border-radius: 999px;
+  background: rgba(28, 20, 35, 0.96);
+  color: #beef9e;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+#startButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(190, 239, 158, 0.22), 0 0 20px rgba(72, 183, 255, 0.12);
+  color: #f4fff1;
+}
+
+#hud {
+  text-align: center;
+  width: fit-content;
+  margin: 12px auto 0 auto;
+  padding: 12px 18px 0 18px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #f1f6fb;
+  text-shadow: 0 0 6px rgba(72, 183, 255, 0.16);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+#gameCanvas {
+  background: linear-gradient(180deg, #10151d 0%, #152027 100%);
+  border: 1px solid rgba(72, 183, 255, 0.34);
+  box-shadow: 0 0 12px rgba(72, 183, 255, 0.12), inset 0 0 12px rgba(190, 239, 158, 0.04);
+}
+
+#abilitySidebar {
+  min-width: 220px;
+  padding: 12px;
+  border: 1px solid rgba(190, 239, 158, 0.18);
+  border-radius: 16px;
+  background: rgba(12, 18, 26, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 12px rgba(72, 183, 255, 0.08);
+}
+
+.abilityOption {
+  border: 2px solid rgba(72, 183, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: rgba(16, 24, 34, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.abilityOption:hover {
+  transform: scale(1.1);
+  border-color: rgba(190, 239, 158, 0.4);
+  box-shadow: 0 0 10px rgba(190, 239, 158, 0.16);
+}
+
+.abilityOption.selected {
+  border-color: #beef9e;
+  background: rgba(190, 239, 158, 0.16);
+  box-shadow: 0 0 12px rgba(190, 239, 158, 0.22);
+  animation: pulse 2s infinite;
+}
+
+#instructions {
+  margin-top: 20px;
+  max-width: 200px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px solid rgba(72, 183, 255, 0.16);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(16, 22, 30, 0.86);
+  animation: fadeIn 1s ease-in-out;
+}
+
+#instructions p + p {
+  margin-top: 6px;
+}
+
+#copyrightNotice {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: rgba(234, 244, 247, 0.72);
+  text-shadow: 0 0 6px rgba(72, 183, 255, 0.12);
+}

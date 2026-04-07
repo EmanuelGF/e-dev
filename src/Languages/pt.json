@@ -1,0 +1,103 @@
+{
+  "lang": "pt",
+  "navTop": {
+    "message": "BEM-VINDO À MINHA PAGINA PESSOAL!",
+    "Menu": {
+      "item1": "<home>",
+      "item2": "<blog>",
+      "item3": "<jogos>"
+    }
+  },
+  "header": {
+    "home": {
+      "title": "Olá, o meu nome é Emanuel!",
+      "intro": "Sou um programador de software baseado em Portugal.",
+      "subTitle": "Portfolio e Blog"
+    },
+    "folio": {
+      "title": "Portfolio",
+      "text1": "Clica ",
+      "text2": " para ver alguns dos meus trabalhos recentes.",
+      "text3": "Os meus interesses de desenvolvimento são variados, mas tenho uma paixão especial por tecnologias web e desenvolvimento de jogos.",
+      "text4": "Tecnologias:",
+      "text5": "C#, .NET, JavaScript, Node.js entre outras.",
+      "linkText1": "<aqui>"
+    },
+    "blog": {
+      "title": "Tambem mantenho um ",
+      "text1": "Gosto de aprender e criar conteudo.",
+      "text2": "Desde web development a jogos, passando por outros tópicos relacionados com tecnologia, partilho o que aprendo e o que me interessa.",
+      "text3": "Tambem me podes encontrar aqui:",
+      "linkText1": "<LinkedIn>",
+      "linkText4": "<blog>"
+    },
+    "contacts": {
+      "title": "Contacto",
+      "text1": "<LinkedIn>",
+      "text2": "Deixa uma mensagem.",
+      "text3": "Diz-me o que tens em mente."
+    },
+    "about": {
+      "title": "Sobre mim",
+      "text1": "Desce e espreita o resto!"
+    },
+    "credits": {
+      "title": "Créditos",
+      "text1": "Este site foi criado usando React!",
+      "text2": "",
+      "title2": "Agradecimentos especiais:",
+      "text4": "A minha esposa 💖",
+      "text5": "",
+      "text6": ""
+    }
+  },
+  "cubeMenu": {
+    "linkText1": "HOME",
+    "linkText2": "PORTFOLIO",
+    "linkText3": "BLOG",
+    "linkText4": "CONTACTO",
+    "linkText5": "SOBRE",
+    "linkText6": "CREDITOS"
+  },
+  "about": {
+    "title": "> SOBRE MIM",
+    "aboutSection": {
+      "fakePrompt1": "[emanuel-dev@localhost~]$ whoami",
+      "text1": "Sou um programador autodidata que gosta de aprender e trabalhar em software.",
+      "expTitle": "Experiencia profissional",
+      "exp0": "{Full Stack Developerna Oceano Platónico}",
+      "exp1": "{Full Stack Developer na YMPEC}",
+      "exp2": "{Estagio na Innuos}",
+      "exp3": "{Freelancing}",
+      "eduTitle": "Educacao",
+      "edu1": "{Tecnico de Informática - IEFP Portugal}",
+      "edu2": "<Codecademy>",
+      "edu3": "{Udemy}"
+    }
+  },
+  "recentWork": {
+    "title": "Alguns trabalhos recentes"
+  },
+  "footer": {
+    "linkText1": "<politica de privacidade>"
+  },
+  "games": {
+    "title": "Jogos",
+    "intro": "Joga pequenos jogos no browser diretamente dentro do site.",
+    "author": "Autor",
+    "published": "Publicado",
+    "launch": "Lançar Jogo",
+    "openStandalone": "Abrir isoladamente",
+    "backToGames": "< voltar aos jogos >",
+    "back": "< voltar >",
+    "notFound": "Jogo nao encontrado."
+  },
+  "article": {
+    "author": "Autor",
+    "loading": "A carregar...",
+    "loadError": "Nao foi possivel carregar o conteudo do artigo.",
+    "notFound": "Artigo nao encontrado.",
+    "notFoundText": "O artigo pedido nao esta disponivel na colecao local.",
+    "back": "< voltar >"
+  }
+}
